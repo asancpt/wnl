@@ -14,3 +14,4 @@ Repository: CRAN
 URL: https://cran.r-project.org/package=wnl
 Packaged: 2017-10-16 08:49:28 UTC; K
 Date/Publication: 2017-10-16 11:17:32 UTC
+Authors@R: person('Kyun-Seop', 'Bae', email = 'k@acr.kr', role = c('aut'))
