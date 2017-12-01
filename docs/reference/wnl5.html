@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -117,7 +117,7 @@
     </tr>
     <tr>
       <th>ObjFx</th>
-      <td><p>Objective function to be minimized. Default is least squaire function.</p></td>
+      <td><p>Objective function to be minimized. Default is least square function.</p></td>
     </tr>
     </table>
     
@@ -151,9 +151,9 @@
 <span class='kw'>for</span> (<span class='no'>i</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='no'>nID</span>) {
   <span class='no'>Data</span> <span class='kw'>=</span> <span class='no'>tData</span>[<span class='no'>tData</span>$<span class='no'>ID</span> <span class='kw'>==</span> <span class='no'>IDs</span>[<span class='no'>i</span>],]
   <span class='no'>Res</span> <span class='kw'>=</span> <span class='fu'>wnl5</span>(<span class='no'>fPK</span>, <span class='no'>Data</span>, <span class='kw'>pNames</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"k"</span>, <span class='st'>"ka"</span>, <span class='st'>"V"</span>), <span class='kw'>IE</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>0.1</span>, <span class='fl'>3</span>, <span class='fl'>500</span>))
-  <span class='fu'>print</span>(<span class='fu'>paste0</span>(<span class='st'>"## ID = "</span>, <span class='no'>i</span>, <span class='st'>"##"</span>))
+  <span class='fu'>print</span>(<span class='fu'>paste</span>(<span class='st'>"## ID ="</span>, <span class='no'>i</span>, <span class='st'>"##"</span>))
   <span class='fu'>print</span>(<span class='no'>Res</span>)
-}</div><div class='output co'>#&gt; [1] "## ID = 1##"
+}</div><div class='output co'>#&gt; [1] "## ID = 1 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 5.395422e-02 1.777418e+00 2.939423e+04 
@@ -181,7 +181,7 @@
 #&gt; $SBC
 #&gt; [1] 23.2026
 #&gt; 
-#&gt; [1] "## ID = 2##"
+#&gt; [1] "## ID = 2 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 1.016619e-01 1.942665e+00 3.202467e+04 
@@ -209,7 +209,7 @@
 #&gt; $SBC
 #&gt; [1] 31.29979
 #&gt; 
-#&gt; [1] "## ID = 3##"
+#&gt; [1] "## ID = 3 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 8.142465e-02 2.453575e+00 3.431936e+04 
@@ -237,7 +237,7 @@
 #&gt; $SBC
 #&gt; [1] -1.930649
 #&gt; 
-#&gt; [1] "## ID = 4##"
+#&gt; [1] "## ID = 4 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 8.746660e-02 1.171479e+00 3.109748e+04 
@@ -265,7 +265,7 @@
 #&gt; $SBC
 #&gt; [1] 26.4003
 #&gt; 
-#&gt; [1] "## ID = 5##"
+#&gt; [1] "## ID = 5 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 8.843543e-02 1.471499e+00 2.692502e+04 
@@ -293,7 +293,7 @@
 #&gt; $SBC
 #&gt; [1] 35.79347
 #&gt; 
-#&gt; [1] "## ID = 6##"
+#&gt; [1] "## ID = 6 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 9.952616e-02 1.163725e+00 4.110450e+04 
@@ -321,7 +321,7 @@
 #&gt; $SBC
 #&gt; [1] 17.02476
 #&gt; 
-#&gt; [1] "## ID = 7##"
+#&gt; [1] "## ID = 7 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 1.022454e-01 6.797419e-01 3.262157e+04 
@@ -349,7 +349,7 @@
 #&gt; $SBC
 #&gt; [1] 7.15575
 #&gt; 
-#&gt; [1] "## ID = 8##"
+#&gt; [1] "## ID = 8 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 9.195633e-02 1.375526e+00 3.569203e+04 
@@ -377,7 +377,7 @@
 #&gt; $SBC
 #&gt; [1] 21.53574
 #&gt; 
-#&gt; [1] "## ID = 9##"
+#&gt; [1] "## ID = 9 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 8.663171e-02 8.865652e+00 3.894823e+04 
@@ -405,7 +405,7 @@
 #&gt; $SBC
 #&gt; [1] 17.22373
 #&gt; 
-#&gt; [1] "## ID = 10##"
+#&gt; [1] "## ID = 10 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 7.396572e-02 6.955052e-01 2.551976e+04 
@@ -433,7 +433,7 @@
 #&gt; $SBC
 #&gt; [1] 10.50626
 #&gt; 
-#&gt; [1] "## ID = 11##"
+#&gt; [1] "## ID = 11 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 9.812327e-02 3.849036e+00 3.794529e+04 
@@ -461,7 +461,7 @@
 #&gt; $SBC
 #&gt; [1] -2.187208
 #&gt; 
-#&gt; [1] "## ID = 12##"
+#&gt; [1] "## ID = 12 ##"
 #&gt; $PE
 #&gt;            k           ka            V 
 #&gt; 1.055750e-01 8.329044e-01 2.401758e+04 

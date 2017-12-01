@@ -52,7 +52,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -79,7 +79,7 @@
     </div>
 
     
-    <p>This is a minimization tool to solve the problems in the book 'Gabrielsson J, Weiner D. Pharmacokinetic and Pharmacodynamic Data Analysis - Concepts and Applications. 5th ed. 2016. (ISBN:9198299107)'.</p>
+    <p>This is a minimization tool to solve the examples in the book Gabrielsson J, Weiner D. 'Pharmacokinetic and Pharmacodynamic Data Analysis - Concepts and Applications' 5th ed. 2016. (ISBN:9198299107).</p>
     
 
         
@@ -115,9 +115,9 @@
   <span class='no'>Data</span> <span class='kw'>=</span> <span class='no'>tData</span>[<span class='no'>tData</span>$<span class='no'>ID</span> <span class='kw'>==</span> <span class='no'>IDs</span>[<span class='no'>i</span>],]
   <span class='no'>Res</span> <span class='kw'>=</span> <span class='fu'><a href='nlr.html'>nlr</a></span>(<span class='no'>fPK</span>, <span class='no'>Data</span>, <span class='kw'>pNames</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"k"</span>, <span class='st'>"ka"</span>, <span class='st'>"V"</span>), <span class='kw'>IE</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='fl'>0.1</span>, <span class='fl'>3</span>, <span class='fl'>500</span>),
             <span class='kw'>SecNames</span><span class='kw'>=</span><span class='fu'>c</span>(<span class='st'>"CL"</span>, <span class='st'>"Thalf"</span>, <span class='st'>"MRT"</span>), <span class='kw'>SecForms</span><span class='kw'>=</span><span class='fu'>c</span>(~<span class='no'>V</span>*<span class='no'>k</span>, ~<span class='fu'>log</span>(<span class='fl'>2</span>)/<span class='no'>k</span>, ~<span class='fl'>1</span>/<span class='no'>k</span>))
-  <span class='fu'>print</span>(<span class='fu'>paste0</span>(<span class='st'>"## ID = "</span>, <span class='no'>i</span>, <span class='st'>"##"</span>))
+  <span class='fu'>print</span>(<span class='fu'>paste</span>(<span class='st'>"## ID ="</span>, <span class='no'>i</span>, <span class='st'>"##"</span>))
   <span class='fu'>print</span>(<span class='no'>Res</span>)
-}</div><div class='output co'>#&gt; [1] "## ID = 1##"
+}</div><div class='output co'>#&gt; [1] "## ID = 1 ##"
 #&gt; $Est
 #&gt;                k         ka            V  AddErrVar   AddErrSD         CL
 #&gt; PE   0.053954312  1.7774192 29394.222169  0.3896372  0.6242092 1585.94503
@@ -155,7 +155,7 @@
 #&gt; $AICc
 #&gt; [1] 35.51538
 #&gt; 
-#&gt; [1] "## ID = 2##"
+#&gt; [1] "## ID = 2 ##"
 #&gt; $Est
 #&gt;              k         ka            V  AddErrVar   AddErrSD         CL
 #&gt; PE   0.1016610  1.9426639 32024.771536  0.8134795  0.9019310 3255.67032
@@ -193,7 +193,7 @@
 #&gt; $AICc
 #&gt; [1] 43.61257
 #&gt; 
-#&gt; [1] "## ID = 3##"
+#&gt; [1] "## ID = 3 ##"
 #&gt; $Est
 #&gt;               k        ka            V   AddErrVar    AddErrSD         CL
 #&gt; PE  0.081424641 2.4535753 34319.365330  0.03966119  0.19915117 2794.44201
@@ -231,7 +231,7 @@
 #&gt; $AICc
 #&gt; [1] 10.38213
 #&gt; 
-#&gt; [1] "## ID = 4##"
+#&gt; [1] "## ID = 4 ##"
 #&gt; $Est
 #&gt;               k         ka            V  AddErrVar   AddErrSD         CL
 #&gt; PE   0.08746650  1.1714812 31097.469810  0.5210868  0.7218634 2719.98679
@@ -269,7 +269,7 @@
 #&gt; $AICc
 #&gt; [1] 38.71308
 #&gt; 
-#&gt; [1] "## ID = 5##"
+#&gt; [1] "## ID = 5 ##"
 #&gt; $Est
 #&gt;               k         ka           V  AddErrVar  AddErrSD         CL
 #&gt; PE   0.08843508  1.4715011 26925.05354  1.2239519  1.106324 2381.11936
@@ -307,7 +307,7 @@
 #&gt; $AICc
 #&gt; [1] 48.10625
 #&gt; 
-#&gt; [1] "## ID = 6##"
+#&gt; [1] "## ID = 6 ##"
 #&gt; $Est
 #&gt;               k         ka            V  AddErrVar   AddErrSD        CL
 #&gt; PE   0.09952552  1.1637350 41104.663654  0.2222050  0.4713862 4090.9629
@@ -345,7 +345,7 @@
 #&gt; $AICc
 #&gt; [1] 29.33754
 #&gt; 
-#&gt; [1] "## ID = 7##"
+#&gt; [1] "## ID = 7 ##"
 #&gt; $Est
 #&gt;               k          ka            V   AddErrVar    AddErrSD          CL
 #&gt; PE   0.10224535  0.67974242 32621.575146  0.09059623  0.30099207 3335.404346
@@ -383,7 +383,7 @@
 #&gt; $AICc
 #&gt; [1] 19.46853
 #&gt; 
-#&gt; [1] "## ID = 8##"
+#&gt; [1] "## ID = 8 ##"
 #&gt; $Est
 #&gt;               k         ka            V  AddErrVar  AddErrSD         CL
 #&gt; PE   0.09195638  1.3755270 35692.013652  0.3348497  0.578662 3282.10853
@@ -421,7 +421,7 @@
 #&gt; $AICc
 #&gt; [1] 33.84852
 #&gt; 
-#&gt; [1] "## ID = 9##"
+#&gt; [1] "## ID = 9 ##"
 #&gt; $Est
 #&gt;                k        ka            V   AddErrVar   AddErrSD          CL
 #&gt; PE   0.086631747  8.865626 38948.216859  0.22625893  0.4756668 3374.152060
@@ -459,7 +459,7 @@
 #&gt; $AICc
 #&gt; [1] 29.53651
 #&gt; 
-#&gt; [1] "## ID = 10##"
+#&gt; [1] "## ID = 10 ##"
 #&gt; $Est
 #&gt;               k         ka           V   AddErrVar    AddErrSD          CL
 #&gt; PE  0.073965665 0.69550537 25519.76585  0.12285496  0.35050671 1887.586459
@@ -497,7 +497,7 @@
 #&gt; $AICc
 #&gt; [1] 22.81904
 #&gt; 
-#&gt; [1] "## ID = 11##"
+#&gt; [1] "## ID = 11 ##"
 #&gt; $Est
 #&gt;               k        ka            V   AddErrVar    AddErrSD          CL
 #&gt; PE  0.098123028 3.8490542 37945.347628  0.03874697  0.19684251 3723.312416
@@ -535,7 +535,7 @@
 #&gt; $AICc
 #&gt; [1] 10.12557
 #&gt; 
-#&gt; [1] "## ID = 12##"
+#&gt; [1] "## ID = 12 ##"
 #&gt; $Est
 #&gt;               k          ka            V  AddErrVar   AddErrSD          CL
 #&gt; PE   0.10557578  0.83291039 24017.514932  0.2553549  0.5053266 2535.667942
