@@ -1,9 +1,15 @@
 \name{NEWS}
 \title{News for Package \pkg{wnl}}
 
+\section{Version 0.3.2 (2017-11-30)}{
+  \itemize{
+    \item{\code{Method} argument added.}
+  }
+}
+
 \section{Version 0.3.1 (2017-10-13)}{
   \itemize{
-    \item{\code{Secondary} added.}
+    \item{\code{Secondary} argument added.}
   }
 }
 

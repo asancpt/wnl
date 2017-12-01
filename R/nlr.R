@@ -1,4 +1,4 @@
-nlr = function(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, SecForms)
+nlr = function(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, SecForms, Method="L-BFGS-B")
 {
 #  e = new.env(parent=globalenv()) # environment should exist
   e$Fx = Fx # function of structural model. Fx should return a vector of the same length to Y
@@ -49,7 +49,7 @@ nlr = function(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, 
   e$alpha  = 0.1 - log((e$IE - e$LB)/(e$UB - e$LB)/(1 - (e$IE - e$LB)/(e$UB - e$LB))) # scaling constant
   e$SGindex = (e$nTheta + 1):(e$nTheta + e$nEps) # index of error variance(s)
 
-  e$r = optim(rep(0.1, e$nPara), ObjEst, method="L-BFGS-B")
+  e$r = optim(rep(0.1, e$nPara), ObjEst, method=Method)
   e$PE = exp(e$r$par - e$alpha)/(exp(e$r$par - e$alpha) + 1)*(e$UB - e$LB) + e$LB
 
   e$InvCov = hessian(e$Obj, e$PE)/2  # FinalEst from EstStep()

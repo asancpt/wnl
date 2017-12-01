@@ -15,7 +15,7 @@ wnl5(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjLS)
   \item{LB}{Lower bound for \code{optim} function. Default value is 0.}
   \item{UB}{Upper bound for \code{optim} function. Default value is 1e+06.}
   \item{Error}{Error model. One of \code{"POIS"} for poisson error, \code{"PROP"} for proportional error, and others for additive error model.}
-  \item{ObjFx}{Objective function to be minimized. Default is least squaire function.}
+  \item{ObjFx}{Objective function to be minimized. Default is least square function.}
 }
 \details{
 This uses scaled transformed parameters and environment \code{e} internally. Here we do not provide standard error. If you want standard error, use \code{nlr}.
@@ -45,7 +45,7 @@ nID = length(IDs)
 for (i in 1:nID) {
   Data = tData[tData$ID == IDs[i],]
   Res = wnl5(fPK, Data, pNames=c("k", "ka", "V"), IE=c(0.1, 3, 500))
-  print(paste0("## ID = ", i, "##"))
+  print(paste("## ID =", i, "##"))
   print(Res)
 }
 

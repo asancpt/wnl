@@ -5,7 +5,8 @@
 It performs nonlinear regression usually for pharmacokinetic and pharmacodynamic models.
 }
 \usage{
-nlr(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, SecForms)
+nlr(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, SecForms, 
+    Method="L-BFGS-B")
 }
 \arguments{
   \item{Fx}{Function for structural model. It should return a vector of same length to observations.}
@@ -18,6 +19,7 @@ nlr(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, SecForms)
   \item{ObjFx}{Objective function to be minimized. Default is maximum likelihood estimation function.}
   \item{SecNames}{Names of secondary parameter estimates}
   \item{SecForms}{Formula to calculate the secondary parameter estimates}
+  \item{Method}{\code{"L-BFGS-B"} is default. See \code{optim} for more detail.}
 }
 \details{
 This uses scaled transformed parameters and environment \code{e} internally.
@@ -49,7 +51,7 @@ for (i in 1:nID) {
   Data = tData[tData$ID == IDs[i],]
   Res = nlr(fPK, Data, pNames=c("k", "ka", "V"), IE=c(0.1, 3, 500), 
             SecNames=c("CL", "Thalf", "MRT"), SecForms=c(~V*k, ~log(2)/k, ~1/k))
-  print(paste0("## ID = ", i, "##"))
+  print(paste("## ID =", i, "##"))
   print(Res)
 }
 
