@@ -1,6 +1,13 @@
 \name{NEWS}
 \title{News for Package \pkg{wnl}}
 
+\section{Version 0.3.3 (2017-12-30)}{
+  \itemize{
+    \item{\code{nlr} returns more information.}
+    \item{\code{cmpChi} is newly introduced.}
+  }
+}
+
 \section{Version 0.3.2 (2017-11-30)}{
   \itemize{
     \item{\code{Method} argument added.}

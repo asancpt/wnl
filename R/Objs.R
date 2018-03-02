@@ -39,5 +39,5 @@ ObjLS = function(vPara) # Default Obj for Covariance Step (original obj)
     Ri[Fi == 0] = 0
   }
 
-  return(sum(Ri * Ri))
+  return(sum(Ri*Ri))
 }

@@ -25,7 +25,7 @@ nlr(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, SecForms,
 This uses scaled transformed parameters and environment \code{e} internally.
 }
 \value{
-This returns point estimate, standard error, relative standard error, covariance matrix of estimates, run test results on residuals, AIC, and AICc. Details are stored in the environment \code{e}.
+This returns point estimate, standard error, relative standard error, covariance matrix of estimates, run test results on residuals, Objective Function Value, AIC, AICc, Convergence code, and Message. More details are stored in the environment \code{e}.
 }
 \author{Kyun-Seop Bae <k@acr.kr>}
 \examples{

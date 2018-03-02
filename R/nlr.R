@@ -94,8 +94,8 @@ nlr = function(Fx, Data, pNames, IE, LB, UB, Error="A", ObjFx=ObjDef, SecNames, 
   e$AIC = e$nRec*log(2*pi) + e$r$value + 2*e$nPara
   e$AICc = e$AIC + 2*e$nPara*(e$nPara + 1)/(e$nRec - e$nPara - 1)
   
-  Result = list(e$Est, e$Cov, e$run, e$AIC, e$AICc)
-  names(Result) = c("Est", "Cov", "run", "AIC", "AICc")
+  Result = list(e$Est, e$Cov, e$run, e$r$value, e$AIC, e$AICc, e$r$covergence, e$r$message)
+  names(Result) = c("Est", "Cov", "run", "Objective Function Value", "AIC", "AICc", "Convergence", "Message")
   return(Result)
 }
 
