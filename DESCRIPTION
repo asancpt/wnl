@@ -12,11 +12,6 @@ NeedsCompilation: no
 LazyLoad: yes
 Repository: CRAN
 URL: https://cran.r-project.org/package=wnl
-<<<<<<< HEAD
-Packaged: 2017-12-01 04:43:18 UTC; Kyun-SeopBae
-Date/Publication: 2017-12-01 04:49:43 UTC
-Authors@R: person('Kyun-Seop', 'Bae', email = 'k@acr.kr', role = c('aut'))
-=======
 Packaged: 2018-03-02 05:11:54 UTC; Kyun-SeopBae
 Date/Publication: 2018-03-02 05:19:31 UTC
->>>>>>> e07272c378c178b2de706ef9ecf1301bac11bbaa
+Authors@R: person('Kyun-Seop', 'Bae', email = 'k@acr.kr', role = c('aut'))

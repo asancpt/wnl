@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>environment for internal data <U+2014> e <U+653C><U+3E32>愼<U+3E32> wnl</title>
+<title>Compare model with Chi-square test <U+2014> cmpChi <U+653C><U+3E32>愼<U+3E32> wnl</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -27,9 +27,9 @@
 <script src="../pkgdown.js"></script>
   
   
-<meta property="og:title" content="environment for internal data <U+2014> e" />
+<meta property="og:title" content="Compare model with Chi-square test <U+2014> cmpChi" />
 
-<meta property="og:description" content="This is for the storage of intermediate data." />
+<meta property="og:description" content="It performs chi-square test for two models comparison." />
 <meta name="twitter:card" content="summary" />
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
@@ -81,21 +81,50 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>environment for internal data</h1>
+    <h1>Compare model with Chi-square test</h1>
     </div>
 
     
-    <p>This is for the storage of intermediate data.</p>
+    <p>It performs chi-square test for two models comparison.</p>
     
 
-        
+    <pre class="usage"><span class='fu'>cmpChi</span>(<span class='no'>r1</span>, <span class='no'>r2</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>r1</th>
+      <td><p>A result from <code>nlr</code></p></td>
+    </tr>
+    <tr>
+      <th>r2</th>
+      <td><p>Another result from <code>nlr</code></p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>One model should include the other model.</p>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Returns a p-value from <code>pchisq</code></p>
+    
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-                </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#details">Details</a></li>
 
+      <li><a href="#value">Value</a></li>
+          </ul>
+
+    <h2>Author</h2>
+    Kyun-Seop Bae &lt;k@acr.kr&gt;
   </div>
 </div>
 
